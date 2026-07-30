@@ -41,3 +41,10 @@ reaction time- must be within 1 second to ensure safety
 accuracy- temperature must be accurate to the degree as even 1 degree wrong could risk safety
 
 efficiency- fan speed is efficient enough to reliably cool downb a large space in time.
+
+
+
+# Algorithms
+
+### Flow chart
+![alt text](Flow_chart.png)
