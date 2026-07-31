@@ -29,8 +29,8 @@ Fan - must turn on when temperature is above or equal to 22, and turn off when i
 
 | Test Case | Input     | Expected Output   |
 |---------- |---------- |----------------   |
-|Temperature above 22 degrees     |           |         The fan activates and cools down the room/ car to desired temperature ( below 22 degrees celcius)          |
-|           |           |                   |
+|Temperature above 22 degrees     |    Temperature sensor reads the temperature        |         The fan activates and cools down the room/ car to desired temperature ( below 22 degrees celcius)          |
+|   Temperature below 22 degrees        |     Temperature sensor reads the temperature      |       The fan is turned off if it was previously running and if it wasnt it will not start.            |
 |           |           |                   |
 
 
@@ -48,3 +48,29 @@ efficiency- fan speed is efficient enough to reliably cool downb a large space i
 
 ### Flow chart
 ![alt text](Flow_chart.png)
+
+### Pseudocode
+
+BEGIN Too_hot()
+
+    clear_outputs()
+    OUTPUT fan_value(1)
+END Too_hot()
+
+BEGIN right_temp()
+
+    clear_outputs()
+    OUTPUT fan_value(0)
+END right_temp()
+
+BEGIN
+
+    While True
+        READ temp
+        IF temp > 22 THEN
+            Too_hot()
+        ELSE IF temp < 22 THEN
+            right_temp()
+        ENDIF
+    ENDWHILE
+END
